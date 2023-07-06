@@ -1,12 +1,12 @@
 import express from 'express';
 import router from './config/router.js';
-/*import db from './db/helpers.js';
-import { PORT } from './config/environment.js';*/
+import db from './db/helpers.js';
+import { PORT } from './config/environment.js';
 
 const app = express();
 
 app.use(express.json());
-//app.use(router);
+app.use(router);
 
 async function startServer() {
   try {
